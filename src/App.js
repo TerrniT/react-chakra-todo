@@ -3,7 +3,6 @@ import {
   Box,
   Grid,
   Flex,
-  Text,
   Input,
   Button,
   Tabs,
@@ -22,7 +21,7 @@ import { useState } from 'react';
 function App() {
   // Colormode style
   const bg = useColorModeValue('purple.400', 'orange.300');
-  const color = useColorModeValue('white', 'gray.800');
+  const color = useColorModeValue('gray.800', 'white');
   const scheme = useColorModeValue('purple', 'orange');
 
   const [newTask, setNewTask] = useState('');
