@@ -1,35 +1,36 @@
 import { Flex, Text, Checkbox, IconButton } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
 
-const TaskItem = ({ task, index, updateTask, removeTask, color, bg }) => {
+const TaskItem = ({ task, index, updateTask, removeTask, color }) => {
   return (
-    <Checkbox
-      onChange={e => updateTask(index, e.target.checked)}
-      colorScheme="green"
-      mb={10}
-      w="100%"
-      flexDir="row"
-      isChecked={task.isChecked}
-    >
-      <Flex w="100%" flexDir="row">
-        {!task.isChecked ? (
-          <Text color={color} alignSelf="center">
-            {task.text}
-          </Text>
-        ) : (
-          <Text color={color} as="s" alignSelf="center">
-            {task.text}
-          </Text>
-        )}
-        <IconButton
-          onClick={() => removeTask(index)}
-          colorScheme="pink"
-          pos="absolute"
-          right={0}
-          icon={<DeleteIcon />}
-        />
-      </Flex>
-    </Checkbox>
+    <Flex alignItems="center">
+      <Checkbox
+        onChange={e => updateTask(index, e.target.checked)}
+        colorScheme="green"
+        w="100%"
+        flexDir="row"
+        isChecked={task.isChecked}
+      >
+        <Flex w="100%" flexDir="row">
+          {!task.isChecked ? (
+            <Text color={color} alignSelf="center">
+              {task.text}
+            </Text>
+          ) : (
+            <Text color={color} as="s" alignSelf="center">
+              {task.text}
+            </Text>
+          )}
+        </Flex>
+      </Checkbox>
+
+      <IconButton
+        onClick={() => removeTask(index)}
+        colorScheme="pink"
+        icon={<DeleteIcon />}
+        mr={5}
+      />
+    </Flex>
   );
 };
 
