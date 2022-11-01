@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import React from 'react';
 import {
   Box,
@@ -11,12 +12,15 @@ import {
   TabPanels,
   TabPanel,
   Heading,
+  Text,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react';
 
 import TaskItem from './components/TaskItem';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { useState } from 'react';
+
+import Scene from './components/Scene';
 
 function App() {
   // Colormode style
@@ -53,14 +57,17 @@ function App() {
 
   return (
     <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
+      <ColorModeSwitcher mt="5" />
+      <Grid p={3} display="flex" flexDirection="column">
+        <Scene />
+        <Heading justifySelf="flex-start" color={color} fontWeight="700">
+          Todo
+        </Heading>
+        <Text>
+          by <Link>@terrnit</Link>
+        </Text>
         <Flex w="100%" h="100vh">
           <Flex w="100%" flexDir="column" ml="20%" mt="5%" mr="20%">
-            <Heading color={color} fontWeight="700">
-              Todo
-            </Heading>
-
             <form onSubmit={addTask}>
               <Flex mt="2%">
                 <Input
