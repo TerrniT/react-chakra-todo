@@ -7,11 +7,11 @@ const TaskItem = ({ task, index, updateTask, removeTask, color }) => {
       <Checkbox
         onChange={e => updateTask(index, e.target.checked)}
         colorScheme="green"
-        w="100%"
+        w="250px"
         flexDir="row"
         isChecked={task.isChecked}
       >
-        <Flex w="100%" flexDir="row">
+        <Flex w="320px" flexDir="row">
           {!task.isChecked ? (
             <Text color={color} alignSelf="center">
               {task.text}
@@ -29,6 +29,7 @@ const TaskItem = ({ task, index, updateTask, removeTask, color }) => {
         colorScheme="pink"
         icon={<DeleteIcon />}
         mr={5}
+        mt={2}
       />
     </Flex>
   );

@@ -6,7 +6,7 @@ import { OrbitControls } from '@react-three/drei';
 const Scene = () => {
   return (
     <Canvas
-      style={{ width: '500px', alignSelf: 'center' }}
+      style={{ width: '250px', alignSelf: 'center' }}
       camera={{ position: [5, 10, 10], zoom: 10 }}
     >
       <pointLight position={[10, 10, 10]} />

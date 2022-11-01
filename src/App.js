@@ -2,7 +2,6 @@ import { useState } from 'react';
 import React from 'react';
 import {
   Box,
-  Grid,
   Flex,
   Input,
   Button,
@@ -58,7 +57,7 @@ function App() {
   return (
     <Box textAlign="center" fontSize="xl">
       <ColorModeSwitcher mt="5" />
-      <Grid p={3} display="flex" flexDirection="column">
+      <Flex p={3} display="flex" flexDirection="column">
         <Scene />
         <Heading justifySelf="flex-start" color={color} fontWeight="700">
           Todo
@@ -66,10 +65,10 @@ function App() {
         <Text>
           by <Link>@terrnit</Link>
         </Text>
-        <Flex w="100%" h="100vh">
-          <Flex w="100%" flexDir="column" ml="20%" mt="5%" mr="20%">
+        <Flex w="325px" h="100vh" alignSelf="center">
+          <Flex w="325px" flexDir="column">
             <form onSubmit={addTask}>
-              <Flex mt="2%">
+              <Flex mt="10%">
                 <Input
                   value={newTask}
                   onChange={e => setNewTask(e.target.value)}
@@ -80,12 +79,20 @@ function App() {
                 </Button>
               </Flex>
             </form>
-            <Tabs mt="2%" w="100%" colorScheme={scheme} variant="soft-rounded">
+            <Tabs mt="2%" colorScheme={scheme}>
               <TabList>
-                <Tab mr={4}>All</Tab>
-                <Tab mr={4}>Incomplete Tasks</Tab>
-                <Tab mr={4}>Completed Tasks</Tab>
-                <Tab isDisabled>{tasks.length} items left</Tab>
+                <Tab fontWeight="bold" fontSize={12}>
+                  All
+                </Tab>
+                <Tab fontWeight="bold" fontSize={12}>
+                  Incomplete Tasks
+                </Tab>
+                <Tab fontWeight="bold" fontSize={12}>
+                  Completed Tasks
+                </Tab>
+                <Tab fontWeight="bold" fontSize={12} isDisabled>
+                  {tasks.length} items left
+                </Tab>
               </TabList>
               <TabPanels>
                 <TabPanel>
@@ -129,7 +136,7 @@ function App() {
             </Tabs>
           </Flex>
         </Flex>
-      </Grid>
+      </Flex>
     </Box>
   );
 }
