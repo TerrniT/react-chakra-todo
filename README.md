@@ -18,8 +18,8 @@ Mindbox — облачная платформа автоматизации ма�
 - Опционально: проект доступен на GitHub Pages/Vercel/etc.
 
 ## Что Получилось
+![image](https://user-images.githubusercontent.com/79077994/199134822-0ca2ce0e-1d5d-4b35-8623-27801ca46de2.png)
 
-![image](https://user-images.githubusercontent.com/79077994/199133467-522c86bc-d3db-428e-b496-aa5e7af89d5c.png)
 
 
 ## Что использовал
