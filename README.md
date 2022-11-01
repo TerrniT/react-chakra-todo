@@ -19,7 +19,8 @@ Mindbox — облачная платформа автоматизации ма�
 
 ## Что Получилось
 
-:)
+![image](https://user-images.githubusercontent.com/79077994/199133467-522c86bc-d3db-428e-b496-aa5e7af89d5c.png)
+
 
 ## Что использовал
 - [ReactJS + ChakraUI] - Bootstrapped starter project (react, react-icons, chakra, etc)
