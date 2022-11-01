@@ -15,6 +15,7 @@ import {
   useColorModeValue,
   Link,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import TaskItem from './components/TaskItem';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
@@ -63,7 +64,13 @@ function App() {
           Todo
         </Heading>
         <Text>
-          by <Link>@terrnit</Link>
+          <Link
+            justifySelf="center"
+            href="https://github.com/TerrniT"
+            isExternal
+          >
+            @terrnit <ExternalLinkIcon justifySelf="center" mb={1} />
+          </Link>
         </Text>
         <Flex w="325px" h="100vh" alignSelf="center">
           <Flex w="325px" flexDir="column">

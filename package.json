@@ -1,7 +1,8 @@
 {
   "name": "react-chakra-todo",
   "version": "0.1.0",
-  "private": true,
+  "author": "TerrniT",
+  "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",
     "@chakra-ui/react": "^2.3.6",
