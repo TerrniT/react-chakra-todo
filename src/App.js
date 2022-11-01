@@ -24,7 +24,7 @@ import Scene from './components/Scene';
 
 function App() {
   // Colormode style
-  const bg = useColorModeValue('purple.400', 'orange.300');
+  const modes = useColorModeValue('purple.400', 'orange.300');
   const color = useColorModeValue('gray.800', 'white');
   const scheme = useColorModeValue('purple', 'orange');
 
@@ -77,11 +77,12 @@ function App() {
             <form onSubmit={addTask}>
               <Flex mt="10%">
                 <Input
+                  focusBorderColor={modes}
                   value={newTask}
                   onChange={e => setNewTask(e.target.value)}
                   placeholder="Add task"
                 />
-                <Button color={color} onClick={addTask} ml={5} bg={bg}>
+                <Button color={color} onClick={addTask} ml={5} bg={modes}>
                   Add Task
                 </Button>
               </Flex>
