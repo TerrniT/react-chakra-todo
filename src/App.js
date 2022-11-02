@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import {
   Box,
@@ -29,7 +29,13 @@ function App() {
   const scheme = useColorModeValue('purple', 'orange');
 
   const [newTask, setNewTask] = useState('');
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    () => JSON.parse(localStorage.getItem('tasks')) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = e => {
     e.preventDefault();
