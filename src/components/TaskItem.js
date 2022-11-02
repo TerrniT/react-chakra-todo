@@ -24,13 +24,7 @@ const TaskItem = ({ task, index, updateTask, removeTask, color }) => {
         </Flex>
       </Checkbox>
 
-      <IconButton
-        onClick={() => removeTask(index)}
-        colorScheme="pink"
-        icon={<DeleteIcon />}
-        mr={5}
-        mt={2}
-      />
+      <IconButton onClick={() => removeTask(index)} icon={<DeleteIcon />} />
     </Flex>
   );
 };

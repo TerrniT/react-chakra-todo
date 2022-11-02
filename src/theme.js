@@ -5,7 +5,7 @@ const styles = {
   global: props => ({
     body: {
       color: mode('gray.800', 'whiteAlpha.900')(props),
-      bg: mode('#CCAE98', '#151515')(props),
+      bg: mode('#edf6f9', '#151515')(props),
     },
   }),
 };
